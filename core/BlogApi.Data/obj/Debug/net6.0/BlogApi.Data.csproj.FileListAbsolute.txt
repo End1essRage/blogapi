@@ -1,0 +1,14 @@
+D:\Projects\blogapi\core\BlogApi.Data\bin\Debug\net6.0\BlogApi.Data.deps.json
+D:\Projects\blogapi\core\BlogApi.Data\bin\Debug\net6.0\BlogApi.Data.dll
+D:\Projects\blogapi\core\BlogApi.Data\bin\Debug\net6.0\BlogApi.Data.pdb
+D:\Projects\blogapi\core\BlogApi.Data\obj\Debug\net6.0\BlogApi.Data.csproj.AssemblyReference.cache
+D:\Projects\blogapi\core\BlogApi.Data\obj\Debug\net6.0\BlogApi.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\blogapi\core\BlogApi.Data\obj\Debug\net6.0\BlogApi.Data.AssemblyInfoInputs.cache
+D:\Projects\blogapi\core\BlogApi.Data\obj\Debug\net6.0\BlogApi.Data.AssemblyInfo.cs
+D:\Projects\blogapi\core\BlogApi.Data\obj\Debug\net6.0\BlogApi.Data.csproj.CoreCompileInputs.cache
+D:\Projects\blogapi\core\BlogApi.Data\obj\Debug\net6.0\BlogApi.Data.dll
+D:\Projects\blogapi\core\BlogApi.Data\obj\Debug\net6.0\refint\BlogApi.Data.dll
+D:\Projects\blogapi\core\BlogApi.Data\obj\Debug\net6.0\BlogApi.Data.pdb
+D:\Projects\blogapi\core\BlogApi.Data\obj\Debug\net6.0\ref\BlogApi.Data.dll
+D:\Projects\blogapi\core\BlogApi.Data\bin\Debug\net6.0\BlogApi.Data.runtimeconfig.json
+D:\Projects\blogapi\core\BlogApi.Data\obj\Debug\net6.0\BlogApi.Data.genruntimeconfig.cache
