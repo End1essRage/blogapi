@@ -19,6 +19,7 @@ namespace BlogApi.Data
             base.OnModelCreating(builder);
         }
 
-        public DbSet<Article> Article { get; set; }
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

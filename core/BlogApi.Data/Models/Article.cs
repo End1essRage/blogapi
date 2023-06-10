@@ -11,5 +11,7 @@ namespace BlogApi.Data.Models
         public string Title {get; set;}
         public string Content {get; set;}
         public DateTime CreatedDate {get; set;}
+        public int AuthorId { get; set; }
+        public virtual User Author { get; set; }
     }
 }

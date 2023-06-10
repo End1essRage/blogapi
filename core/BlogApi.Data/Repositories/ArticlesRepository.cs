@@ -18,22 +18,22 @@ namespace BlogApi.Data.Repositories
 
         public void Add(Article article)
         {
-            _context.Article.Add(article);
+            _context.Articles.Add(article);
         }
 
         public Task<List<Article>> GetAll()
         {
-            return _context.Article.ToListAsync();
+            return _context.Articles.Include(a => a.Author).ToListAsync();
         }
 
         public Task<Article> GetOne(int id)
         {
-            return _context.Article.SingleOrDefaultAsync(a => a.ArticleId == id);
+            return _context.Articles.Include(a => a.Author).SingleOrDefaultAsync(a => a.ArticleId == id);
         }
 
         public void Remove(Article article)
         {
-            _context.Article.Remove(article);
+            _context.Articles.Remove(article);
         }
 
         public Task SaveChanges()

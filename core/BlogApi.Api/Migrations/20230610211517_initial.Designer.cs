@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BlogApi.Api.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20230603092109_Init")]
-    partial class Init
+    [Migration("20230610211517_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,9 @@ namespace BlogApi.Api.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ArticleId"));
 
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("text");
@@ -46,7 +49,45 @@ namespace BlogApi.Api.Migrations
 
                     b.HasKey("ArticleId");
 
-                    b.ToTable("Article");
+                    b.HasIndex("AuthorId");
+
+                    b.ToTable("Articles");
+                });
+
+            modelBuilder.Entity("BlogApi.Data.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("BlogApi.Data.Models.Article", b =>
+                {
+                    b.HasOne("BlogApi.Data.Models.User", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
                 });
 #pragma warning restore 612, 618
         }
